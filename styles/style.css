@@ -1,0 +1,160 @@
+/* Global background styling */
+.stApp {
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 20px;
+}
+
+/* Background styling for light mode */
+.stApp.light-mode {
+    background: linear-gradient(135deg, #EBF5FB, #D4E6F1);  /* Light gradient */
+}
+
+/* Background styling for dark mode */
+.stApp.dark-mode {
+    background: linear-gradient(135deg, #2C3E50, #34495E);  /* Dark gradient */
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    color: white;
+}
+
+/* Sidebar in light mode */
+[data-testid="stSidebar"].light-mode {
+    background-color: #34495E;
+}
+
+/* Sidebar in dark mode */
+[data-testid="stSidebar"].dark-mode {
+    background-color: #2C3E50;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Title styling */
+h1, h2, h3 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Title color for light mode */
+/* h1.light-mode, h2.light-mode, h3.light-mode {
+    color: #2E86C1;
+} */
+
+/* Title color for dark mode */
+/* h1.dark-mode, h2.dark-mode, h3.dark-mode {
+    color: #F39C12;
+} */
+
+/* Buttons and widgets styling */
+button[kind="primary"] {
+    background-color: #1ABC9C;
+    border-color: #16A085;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Footer in light mode */
+footer.light-mode {
+    background-color: #34495E;
+    color: white;
+}
+
+/* Footer in dark mode */
+footer.dark-mode {
+    background-color: #2C3E50;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+/* Light Mode & Dark Mode Detection */
+
+/* Light mode (default) */
+@media (prefers-color-scheme: light) {
+    .stApp {
+        background: linear-gradient(135deg, #EBF5FB, #D4E6F1);
+    }
+    .stSidebar {
+        background-color: #34495E;
+
+    }
+    h1, h2, h3, p1{
+        color: #2E86C1;
+    }
+    
+    footer {
+        background-color: #34495E;
+        color: white;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    [data-testid="stSidebar"] {
+        color: #FFFFFF; /* Default for dark mode */
+    }
+    
+    .stApp {
+        background: linear-gradient(135deg, #2C3E50, #34495E);
+    }
+    .stSidebar {
+        background-color: #2C3E50;
+    }
+    h1, h2, h3 {
+        color: #F39C12;
+    }
+    footer {
+        background-color: #2C3E50;
+        color: white;
+    }
+}
+
+
+/* Styling untuk pesan hasil evaluasi di tengah */
+.center-message {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk informasi judul (File Name, Corrosion Area, Severity Level) */
+.center-message h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2E86C1;
+}
+
+.center-message p {
+    font-size: 18px;
+    color: #34495E;
+}
+
+/* Gaya untuk menambahkan sedikit ruang antara kolom-kolom yang berisi gambar */
+.container-images {
+    margin-top: 20px;
+}
+
